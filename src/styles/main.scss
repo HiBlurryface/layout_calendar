@@ -20,8 +20,9 @@ html {
 .calendar {
   display: flex;
   flex-wrap: wrap;
+  padding: 0 5px;
   gap: $gap;
-  width: calc($columnSize * $columns + 10px);
+  width: calc($columnSize * $columns + $gap * 6);
 
   $days: (
     mon: 1,
@@ -70,7 +71,7 @@ html {
 
     @for $i from 1 through 31 {
       &:nth-child(#{$i}):before {
-        content: "#{$i}";
+        content: '#{$i}';
       }
     }
   }
